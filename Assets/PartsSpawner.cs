@@ -1,27 +1,24 @@
-using Unity.VisualScripting;
-using UnityEditor.EditorTools;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PartsSpawner : MonoBehaviour
 {
     [Header("Main Parts Spawner Settings")]
     [Tooltip("The object we want to spawn")]
-    public GameObject mainObjectToSpawn;
+    [SerializeField] private GameObject mainObjectToSpawn;
     [Tooltip("The range of height we want to spawn the object in")]
-    public float mainHeightRangeOffset = 22f;
+    [SerializeField] private float mainHeightRangeOffset = 22f;
     [Tooltip("Delay time between spawning objects of the main")]
-    public float delayTimeMain = 2f;
+    [SerializeField] private float delayTimeMain = 2f;
 
     [Header("Secondary Parts Spawner Settings")]
     [Tooltip("The object we want to spawn")]
-    public GameObject secondaryObjectToSpawn;
+    [SerializeField] private GameObject secondaryObjectToSpawn;
     [Tooltip("Range of the height from the main object - according to its position on the Y axis from center main object")]
-    public float secondaryHeightRangeOffset = 6f;
+    [SerializeField] private float secondaryHeightRangeOffset = 6f;
     [Tooltip("The ratio of main to secondary objects - e.x 2 means 1 main objects to 2 secondary object")]
-    public int spawnRatioSecondaryToMain = 5; // The ratio of main to secondary objects
+    [SerializeField] private int spawnRatioSecondaryToMain = 5; // The ratio of main to secondary objects
     [Tooltip("Delay time between spawning objects of the second")]
-    public float delayTimeSecond = 1f;
+    [SerializeField] private float delayTimeSecond = 1f;
 
     private Vector3 lastMainSpawn = Vector3.zero;  // The last position we spawned the object in
     private int maxSpawnCount = 100; // Limit the number of spawns
@@ -39,16 +36,16 @@ public class PartsSpawner : MonoBehaviour
         {
             spawnMain();
             currentSpawnCount++;
-            await Awaitable.WaitForSecondsAsync(delayTimeMain);
 
             int counter = 0;
             do
             {
-                spawnSecondary();
                 await Awaitable.WaitForSecondsAsync(delayTimeSecond);
+                spawnSecondary();
                 currentSpawnCount++;
                 counter++;
             } while (counter < spawnRatioSecondaryToMain);
+            await Awaitable.WaitForSecondsAsync(delayTimeMain);
         }
     }
 

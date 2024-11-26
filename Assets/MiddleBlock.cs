@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class MiddleBlock : MonoBehaviour
 {
     [Header("Logic Object - Drag and Drop Logic Object")]
     [Tooltip("Game logic responsible for score")]
-    public Logic logicScript;
+    [SerializeField] private Logic logicScript;
     private bool gainScore = false;
 
     void Start()

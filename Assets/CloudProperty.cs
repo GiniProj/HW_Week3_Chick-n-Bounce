@@ -1,17 +1,16 @@
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class CloudProperty : MonoBehaviour
 {
     [Header("Cloud Properties")]
     [Tooltip("Approve to change the scale of the cloud - Override Transform Scale")]
-    public bool changeScale = true;
+    [SerializeField] private bool changeScale = true;
     [Tooltip("Scale of the cloud")]    
-    public float mainScale = 1.5f;
+    [SerializeField] private float mainScale = 1.5f;
     [Tooltip("Approve to change the scale of the cloud randomly - Override Transform Scale")]
-    public bool randomMainScale = true;
+    [SerializeField] private bool randomMainScale = true;
     [Tooltip("Range to Random scale from main scale cloud")]
-    public float mainScaleRangeRandomness = 0.5f;
+    [SerializeField] private float mainScaleRangeRandomness = 0.5f;
 
     // Add minimum scale threshold
     private const float MIN_SCALE_THRESHOLD = 0.1f;

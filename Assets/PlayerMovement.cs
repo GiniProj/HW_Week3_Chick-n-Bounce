@@ -5,31 +5,29 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Movement Settings")]
     [Tooltip("Player Rigidbody2D Component")]
-    public Rigidbody2D myRigidbody;
+    [SerializeField] private Rigidbody2D myRigidbody;
 
     [Header("User Movement Settings")]
     [Tooltip("User action settings for jumping and moving")]
-    public InputAction rightMovementButton;
-    public InputAction leftMovementButton;
-    public InputAction jumpMovementButton;
+    [SerializeField] private InputAction rightMovementButton;
+    [SerializeField] private InputAction leftMovementButton;
+    [SerializeField] private InputAction jumpMovementButton;
 
     [Header("User Movement Properties")]
     [Tooltip("Force applied for horizontal movement")]
-    public float moveForce = 50f;
+    [SerializeField] private float moveForce = 50f;
     [Tooltip("Maximum movement speed")]
-    public float maxMoveSpeed = 5f;
+    [SerializeField] private float maxMoveSpeed = 5f;
     [Tooltip("Force applied when jumping")]
-    public float jumpForce = 12f;
+    [SerializeField] private float jumpForce = 12f;
     [Tooltip("Player max height movement")]
-    public float yPositionRangeLimit = 25f;
+    [SerializeField] private float yPositionRangeLimit = 25f;
     [Tooltip("Player horizontal movement limits")]
-    public float xPositionRangeLimit = 48f;
-    [Tooltip("X coordinate where object will be destroyed for player movement")]
-    public float deadZone = -55f;
+    [SerializeField] private float xPositionRangeLimit = 48f;
 
     [Header("Logic Script")]
     [Tooltip("Logic script")]
-    public Logic logicScript;
+    [SerializeField] private Logic logicScript;
 
     // Input state variables
     private bool isAlive = true;
@@ -176,14 +174,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    // void OnDisable()
-    // {
-    //     // Disable input actions
-    //     rightMovementButton.Disable();
-    //     leftMovementButton.Disable();
-    //     jumpMovementButton.Disable();
-    // }
 
     private void OnBecameInvisible()
     {

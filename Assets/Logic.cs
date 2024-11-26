@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class Logic : MonoBehaviour
 {
     [Header("Logic Basic Settings")]
     [Tooltip("Player Score - Default 0")]
-    public int score = 0;
-    public Text scoreText;
+    [SerializeField] private int score = 0;
+    [SerializeField] private Text scoreText;
     [Tooltip("Top Score - Default 0")]
-    public int topScore = 0;
-    public Text topScoreText;
+    [SerializeField] private int topScore = 0;
+    [SerializeField] private Text topScoreText;
 
     public GameObject gameOverScreen;
 
@@ -72,7 +73,4 @@ public class Logic : MonoBehaviour
             Debug.LogError("TopScoreText is not assigned.");
         }
     }
-
-
-
 }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class NewSceneLogic : MonoBehaviour
 {
-    public Text topScoreText;
+    [SerializeField] private Text topScoreText;
 
     void Start()
     {
