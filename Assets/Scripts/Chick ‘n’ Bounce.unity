@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -530,6 +531,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d32b5e37f2a4f34187a1df8c9bd5a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 2004109157}
+  - {fileID: 1044428692}
+  - {fileID: 2438787918288646294, guid: db7f439d6b8a5794aacfa30c9d040a9c, type: 3}
+  - {fileID: 4871963274660978953, guid: ee7d4b08602e31b47819e63df97820e8, type: 3}
+  sensitivityAdjustment: 1
 --- !u!1 &656516032
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +836,7 @@ Transform:
   m_GameObject: {fileID: 1044428692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.7, y: -26.8, z: 0}
+  m_LocalPosition: {x: 0.9, y: -26.8, z: 0}
   m_LocalScale: {x: 13.439995, y: 4.2775683, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -836,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangeSetActive: 45
-  time: 2
+  time: 4
 --- !u!1 &1490212648
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,13 +936,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048af0c0d7b94724ba1c778effa96fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainObjectToSpawn: {fileID: 333902622042080010, guid: 62ce9c623762d6748938edba913e9a14, type: 3}
-  mainHeightRangeOffset: 10
-  delayTimeMain: 4
+  mainObjectToSpawn: {fileID: 2438787918288646294, guid: db7f439d6b8a5794aacfa30c9d040a9c, type: 3}
+  mainHeightRangeOffset: 5
+  delayTimeMain: 2
   secondaryObjectToSpawn: {fileID: 4871963274660978953, guid: ee7d4b08602e31b47819e63df97820e8, type: 3}
-  secondaryHeightRangeOffset: 6
-  spawnRatioSecondaryToMain: 4
-  delayTimeSecond: 2
+  secondaryHeightRangeOffset: 5
+  spawnRatioSecondaryToMain: 3
+  delayTimeSecond: 3
 --- !u!1 &1808718005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,8 +1382,8 @@ Transform:
   m_GameObject: {fileID: 2004109157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.7, y: -20.4, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalPosition: {x: 0.5, y: -20.4, z: 0}
+  m_LocalScale: {x: 1.2043217, y: 1.2043217, z: 1.2043217}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1438,7 +1457,6 @@ MonoBehaviour:
   jumpForce: 40
   yPositionRangeLimit: 25
   xPositionRangeLimit: 48
-  deadZone: -50
   logicScript: {fileID: 136995817}
 --- !u!58 &2004109163
 CircleCollider2D:

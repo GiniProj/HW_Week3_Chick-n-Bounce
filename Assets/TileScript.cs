@@ -12,7 +12,7 @@ public class TileScript : MonoBehaviour
 
     private void Start()
     {
-        ChangeActivationLoop();
+        randomPositionChanging();
     }
 
     private void OnDestroy()
@@ -20,7 +20,7 @@ public class TileScript : MonoBehaviour
         isRunning = false;  // Stop the async loop when object is destroyed
     }
 
-    async void ChangeActivationLoop()
+    async void randomPositionChanging()
     {
         while (isRunning)
         {
