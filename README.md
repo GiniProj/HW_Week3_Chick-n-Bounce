@@ -2,7 +2,7 @@
 
 **Game Development Homework Week 3 - Mini Game - Amit Gini**
 
-[**Play the Game on Itch.io**](https://kg-proj.itch.io/hw-week2-part-2)
+[**Play the Game on Itch.io**](https://kg-proj.itch.io/chick-n-bounce)
 
 <img src="https://github.com/GiniProj/HW_Week3_Chick-n-Bounce/raw/main/GamePicture.png" alt="Description Image-HW3-Q2" width="400" height="200">
 
