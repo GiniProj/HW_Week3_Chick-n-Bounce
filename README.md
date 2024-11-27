@@ -2,6 +2,11 @@
 
 **Game Development Homework Week 3 - Mini Game - Amit Gini**
 
+[**Play the Game on Itch.io**](https://kg-proj.itch.io/hw-week2-part-2)
+
+<img src="https://github.com/GiniProj/HW_Week3_Chick-n-Bounce/raw/main/GamePicture.png" alt="Description Image-HW3-Q2" width="400" height="200">
+
+
 ## Description
 Chick-n-Bounce is a mini-game where the player controls a bouncing chicken. The objective is to bounce on clouds, gain points by passing through gates, and avoid falling.
 
@@ -18,15 +23,13 @@ Chick-n-Bounce is a mini-game where the player controls a bouncing chicken. The 
 ## Installation
 To play the game, clone this repository and open the project in your preferred C# development environment.
 
+
 ```bash
 git clone https://github.com/GiniProj/HW_Week3_Chick-n-Bounce.git
 ```
 
-Open the project using an IDE like Visual Studio and run the game.
+Open the project using unity version 6000.0.27f
 
 ## License
 This project is licensed under the MIT License.
 
----
-
-Feel free to let me know if you need any additional information included!
